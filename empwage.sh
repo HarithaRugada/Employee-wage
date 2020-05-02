@@ -1,5 +1,5 @@
 #! /bin/bash -x
-echo "Welcome to Employee Wage Computation Program"
+echo "Welcome to Employee Wage Computattion Program"
 present=1
 status=$(( $RANDOM%2 ))
 if [ $status -eq $present ]
