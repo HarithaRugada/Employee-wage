@@ -6,6 +6,10 @@ hourwage=20
 salary=0
 totalwh=0
 days=0
+function workinghours()
+{
+	echo "Total working hours : "$totalwh
+}
 while [ $totalwh -lt 100 ] && [ $days -lt 20 ]
 do
         status=$(( $RANDOM%2 ))
@@ -33,3 +37,5 @@ do
         fi
 done
 echo "Month salary:" $salary
+echo "Total days worked:" $days
+workhours=$( workinghours $totalwh )
