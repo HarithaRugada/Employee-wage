@@ -8,7 +8,7 @@ totalwh=0
 days=0
 function workinghours()
 {
-	echo "Total working hours : "$totalwh
+	echo "Total working hours worked by the employee : "$totalwh
 }
 while [ $totalwh -lt 100 ] && [ $days -lt 20 ]
 do
@@ -36,6 +36,6 @@ do
                 echo "employee is absent"
         fi
 done
-echo "Total wage:" $salary
-echo "Total days worked:" $days
+echo "Total wage of the employee:" $salary
+echo "Total days worked by employee:" $days
 workhours=$( workinghours $totalwh )
