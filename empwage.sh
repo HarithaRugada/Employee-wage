@@ -36,6 +36,6 @@ do
                 echo "employee is absent"
         fi
 done
-echo "Month salary:" $salary
+echo "Total wage:" $salary
 echo "Total days worked:" $days
 workhours=$( workinghours $totalwh )
