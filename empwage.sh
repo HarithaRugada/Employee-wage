@@ -6,18 +6,16 @@ hourwage=20
 salary=0
 if [ $status -eq $present ]
 then
-	echo "present"
 	workhours=$(( $RANDOM%10 ))
-	if [ $workhours -lt 9 ]
-	then
-		echo "part-time"
-		salary=$(( $hourwage*$workhours ))
-		echo $salary
-	else
-		echo "full-time"
-		salary=$(( $hourwage+$workhours ))
-		echo $salary
-	fi
+                #adding 1 to workhours to avoid the case when workhour is zero and being marked as present
+                case $workhours in
+                        9) echo "Full time"
+                                salary=$(( $(( $workhours+1 ))*$hourwage ))
+                                ;;
+                        *) echo "Part time"
+                                salary=$(( $(( $workhours+1 ))*$hourwage ))
+                                ;;
+                esac
 else
 	echo "absent"
 fi
